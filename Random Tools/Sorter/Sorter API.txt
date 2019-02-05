@@ -1,0 +1,7 @@
+public <T extends Comparable<T>> T[] Sorter(T[] list)
+	sorts array of any object in ascending order based on object's compareTo method
+public <T extends Comparable<T>> T[] Sorter(T[] list, int order)
+	sorts array of any object based on object's compareTo method in either ascending or descending order
+	order is determind by a positve (ascending) or negitve (descending) int
+
+Does not support Primative Data Types

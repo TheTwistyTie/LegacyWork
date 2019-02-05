@@ -1,0 +1,19 @@
+Methods:
+public <T extends Comparable<T>> int BinarySearch(T[] list, T target, int returnPoint)
+		Returns search with specified return point
+		Return point key:
+			-1 returns position before target if target isn't found
+			0 returns exact position of target, if target isn't found returns -1
+			1 returns position after target if target isn't found
+public <T extends Comparable<T>> int BinarySearch(T[] list, T target)
+		Preforms BinarySearch with default return point (0)
+public <T extends Comparable<T>> int BinarySearch(T[] list, T target, int first, int last, int returnPoint)
+		Returns search with specified return point
+		First is where the search starts looking between
+		Last is where the search ends looking between
+			leave first and last out if you want to search entire array
+		Return point key:
+			-1 returns position before target if target isn't found
+			0 returns exact position of target, if target isn't found returns -1
+			1 returns position after target if target isn't found
+

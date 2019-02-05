@@ -1,0 +1,54 @@
+public class TestList{
+	public static void main(String[] args){
+		Student s1 = new Student("Adams", 3.9, 26);
+		Student s2 = new Student("Lewis", 2.1, 29);
+		Student s3 = new Student("Lopez", 4.0, 53);
+		Student s4 = new Student("Smith", 3.2, 22);
+		Student s5 = new Student("Zeeler", 3.6, 38);
+		LinkedList list1 = new LinkedList();
+		list1.addFront(s1);
+		list1.addFront(s2);
+		list1.addFront(s3);
+		list1.addFront(s4);
+		list1.addFront(s5);
+		System.out.println("List 1:");
+		list1.printLinkedList();
+		System.out.println("\nBest Student:");
+		Student l1b = list1.bestStudent();
+		System.out.println(l1b.toString());
+		System.out.println("\nWorst Student:");
+		Student l1w = list1.findWorstStudent();
+		System.out.println(l1w.toString());
+		System.out.println("\nNumber of Nodes: " + list1.findNodeCount());
+		LinkedList list2 = new LinkedList();
+		list2.addTail(s1);
+		list2.addTail(s2);
+		list2.addTail(s3);
+		list2.addTail(s4);
+		list2.addTail(s5);
+		System.out.println("\nList 2:");
+		list2.printLinkedList();
+		System.out.println("\nBest Student:");
+		Student l2b = list2.bestStudent();
+		System.out.println(l2b.toString());
+		System.out.println("\nWorst Student:");
+		Student l2w = list2.findWorstStudent();
+		System.out.println(l2w.toString());
+		System.out.println("\nNumber of Nodes: " + list2.findNodeCount());
+		LinkedList list3 = new LinkedList();
+		list3.addInOrder(s1);
+		list3.addInOrder(s2);
+		list3.addInOrder(s3);
+		list3.addInOrder(s4);
+		list3.addInOrder(s5);
+		System.out.println("\nList 3:");
+		list3.printLinkedList();
+		System.out.println("\nBest Student:");
+		Student l3b = list3.bestStudent();
+		System.out.println(l3b.toString());
+		System.out.println("\nWorst Student:");
+		Student l3w = list3.findWorstStudent();
+		System.out.println(l3w.toString());
+		System.out.println("\nNumber of Nodes: " + list3.findNodeCount());
+	}
+}

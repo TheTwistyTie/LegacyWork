@@ -1,0 +1,45 @@
+Contructors:
+Fraction(int wholeNum, int numerator, int denominator)	|	Can throw RuntimeException (denominator cannot equal 0)
+Fraction(int numerator, int denominator)		|	Can throw RuntimeException (denominator cannot equal 0)
+Fraction(int wholeNum)
+Fraction(double decimal)
+Fraction(float decimal)
+
+Methods:
+
+|    	Return Type 	| 	Method				|	Description								|
+|-----------------------------------------------------------------------------------------------------------------------------------------------|
+|	void 		|	setWholeNumber(int x)		|	Sets the whole number to specified int					|
+|	void 		|	simplify()			|	Simplifies fraction							|
+|	void 		|	toImproperFraction()		|	Converts fraction into an improper fraction				|
+|	void 		|	abs()				|	Sets fraction it its absolute value					|
+|	void 		|	negate()			|	Changes fraction from a positve to a negitve or negitive to positve	|
+|	int 		|	getWholeNumber()		|	Returns whole number value						|
+|	int 		|	getNumerator()			|	Returns numerator value							|
+|	int 		|	getDenominator()		|	Returns denominator value						|
+|	int 		|	getGCF(int x, int y)		|	Returns the greates common factor of two numbers			|
+|	int 		|	compareTo(Fraction comparitor)	|	~~~~~~~~~								|
+|	int 		|	compareTo(int compare)		|	Compares fraction to given type						|
+|	int 		|	compareTo(double compare)	|	1 = Fraction is larger | 0 = Equal | -1 = Fraction is smaller		|
+|	int 		|	compareTo(float compare)	|	~~~~~~~~~								|
+|	double 		|	decimalValue()			|	Returns the decimal value of fraction					|
+|	boolean 	|	isNegative()			|	Returns a positve boolean value if fraction is negitive			|
+|	String 		|	toString()			|	Returns formated String containing fraction's value			|
+|	Fraction 	|	pow(int power)			|	Returns fraction to the power of the given int				|
+|	Fraction 	|	add(Fraction augend)		|	~~~~~~~~~								|
+|	Fraction 	|	add(int augend)			|	Adds fraction and value of 						|
+|	Fraction 	|	add(double augend)		|	the given data type							|
+|	Fraction 	|	add(float augend)		|	~~~~~~~~~								|
+|	Fraction 	|	subtract(Fraction subtrahend)	|	~~~~~~~~~								|
+|	Fraction 	|	subtract(int subtrahend)	|	Subtracts fraction and value of						|
+|	Fraction 	|	subtract(double subtrahend)	|	the given data type							|
+|	Fraction 	|	subtract(float subtrahend)	|	~~~~~~~~~								|
+|	Fraction 	|	multiply(Fraction multiplicand)	|	~~~~~~~~~								|
+|	Fraction 	|	multiply(int multiplicand)	|	Multiplies fraction and value of					|
+|	Fraction 	|	multiply(double multiplicand)	|	the given data type							|
+|	Fraction 	|	multiply(float multiplicand)	|	~~~~~~~~~								|
+|	Fraction 	|	divide(Fraction divisor)	|	~~~~~~~~~								|
+|	Fraction 	|	divide(int divisor)		|	Divides fraction and value of						|
+|	Fraction 	|	divide(double divisor)		|	the given data type							|
+|	Fraction 	|	divide(float divisor)		|	~~~~~~~~~								|
+|-----------------------------------------------------------------------------------------------------------------------------------------------|

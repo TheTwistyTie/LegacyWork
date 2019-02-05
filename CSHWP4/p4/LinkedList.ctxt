@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ LinkedList()
+comment1.params=s
+comment1.target=void\ addFront(Student)
+comment2.params=s
+comment2.target=void\ addTail(Student)
+comment3.params=
+comment3.target=Student\ bestStudent()
+comment4.params=
+comment4.target=void\ printLinkedList()
+comment5.params=list
+comment5.target=int\ countNodesRec(LinkedList.Node)
+comment6.params=list
+comment6.target=Student\ worstStudentRec(LinkedList.Node)
+comment7.params=
+comment7.target=Student\ findWorstStudent()
+comment8.params=
+comment8.target=int\ findNodeCount()
+comment9.params=s
+comment9.target=void\ addInOrder(Student)
+numComments=10
