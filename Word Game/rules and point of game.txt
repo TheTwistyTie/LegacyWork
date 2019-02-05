@@ -1,0 +1,9 @@
+point of game is to figure out opponents word
+
+pick 4 letter word with no repeating letters
+
+Stategy:
+	guess words with letters that you know what the answer will be
+	if you know a letter is not in a word guess words with that letter to narrow the choices down
+	so if guess a word with 3 letters you know arent in the word and your opponite says there is one letter,
+	you know the 4th letter is in the word for certain

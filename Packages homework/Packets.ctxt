@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=id\ weight\ dest\ orig
+comment0.target=Packets(int,\ double,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=boolean\ isHeavy()
+comment3.params=
+comment3.target=boolean\ isInState()
+comment4.params=
+comment4.target=double\ getWeight()
+comment5.params=
+comment5.target=java.lang.String\ destinationLocation()
+numComments=6

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Packages()
+comment1.params=
+comment1.target=java.lang.String\ toSting()
+comment2.params=
+comment2.target=void\ displayHeavyPackages()
+comment3.params=
+comment3.target=void\ displayInStatePackages()
+comment4.params=
+comment4.target=Packets\ MaxWeightPacket()
+comment5.params=
+comment5.target=void\ displayAverageWeight()
+comment6.params=
+comment6.target=void\ displayLocalPackets()
+comment7.params=
+comment7.target=void\ displayNonLocalPackets()
+numComments=8

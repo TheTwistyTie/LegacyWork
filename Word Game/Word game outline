@@ -1,0 +1,156 @@
+Word game outline
+Varables
+	userWord = string, stores user word
+	progWord = string, stores programs word
+	guess = string, stores current guess
+	ALPH = arry, type: booleans, arry lenght: 26, 0:A - 25:Z, used to store which letters are active
+	TURNS = array, type: string, arry length: 100, used to store all previous words program has guessed
+	turnCount = int, used to store how many words are in the TURNS array
+	PREVTURN = int, set to 0 through 4, used to record the result of the last turn
+	PENDSOLVE = string, a word saved to find which letters are in user word
+	TRIES = int, set 0 through 3, used to store the number of tries to solve the word in PENDSOLVE, also used to select which letter to test 0 being the first and 3 being the last
+	SOLVED = array, type: Char, arry length: 4, used to store which letters have been confirmed as in the user word
+	SOLVECOUNT = int, set to 0 through 4, used to store the amount of letters in the SOLVED array
+	SOLVEGUESS = array, type: string, arry length: 100, used to store guesses that have all letters correct
+	SGT = int, used to store how many words are in the SOLVEGUESS array
+user -> enters word of choice
+program -> generates word from dictionary
+user -> guesses word
+program -> compairs user guessed word to it's chosen word
+	if 4 compare words to see if they are an exact match
+		yes: print "good game"
+			terminate program
+		no: print "not a match"
+program -> prints number of letters that match
+program -> guesses random word for first turn
+user -> enters amount of correct letters
+program -> varifies validity of user's answer
+	0: program turns those letters off in ALPH
+		adds word to turns list
+		advances turn count
+		set PREVTURN to 0
+		end turn
+	1 - 3: program adds word to PENDSOLVE
+		adds word to turns list
+		advances turn count
+		set PREVTURN to amount of correct letters
+		end turn
+	4: program adds letters to SOLVED
+		compairs guessed word to user entered word
+			match: Prints "good game"
+				terminates program
+			non-match: adds word to turns list
+				advances turn count
+				sets SOLVECOUNT to 4
+				set PREVTURN to 4
+				adds guess to SOLVEGUESS
+				advances SGT
+				end turn
+lines 18 through 24 are repeated
+program -> looks at PREVTURN
+	returns number
+		0: program guesses new word with letters that are all turned on in ALPH
+			user enters amount of letters correct
+			program checks for user error
+				0: turns all letters in word off in ALPH
+				add word to turns list
+				advance turn count
+				end turn
+				1-3: add word to PENDSOLVE
+				add word to turns list
+				advance turn count
+				end turn
+				4: compare word to user word
+					match: print "Good game"
+						termanates program
+					non-match: set all leters to SOLVED
+						advances turn count
+						sets SOLVECOUNT to 4
+						set PREVTURN to 4
+						adds guess to SOLVEGUESS
+						advances SGT
+						end turn
+		1 - 3: program looks at word in PENDSOLVE and guesses word with 3 letters in common using TRIES to detrmine which letter to swap out.
+			letters correct
+				user enters amount of letters correct
+				program checks for user error
+					0: turns all letter in guessed word off in ALPH
+						adds letter that was changed in PENDSOLVE to SOLVED
+						removes word in PENDSOLVE 
+						advances SOLVECOUNT by 1
+						adds guessed word to turns list
+						advanced turn count
+					1: if last turn
+						1: adds letter that was changed and new letter to PROBNOT list
+							add letter changed to word in PENDSOLVE
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+						2: adds letter changed to SOLVED
+							advances SOLVECOUNT by 1
+							turn new letter off in ALPH
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+					2: if last turn
+						1: add new letter to SOLVED
+							advance SOLVECOUNT
+							advace TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+						2: add letter that was changed and new letter to PROBNOT list
+							add letter changed to word in PENDSOLVE
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+						3: add letter changed to SOLVED
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+					3: if last turn
+						2: add new letter to SOLVED
+							advance SOLVECOUNT by 1
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+						3: add letter that was changed and new letter to PROBNOT list
+							add letter changed to word in PENDSOLVE
+							advance TRIES varable in PENDSOLVE by 1
+							add word to turns list
+							advance turn count
+						4: add all letters to SOLVED
+							set SOLVECOUNT to 4
+							comapre guessed word to user entered word
+							match: print "Good Game"
+							non-match: adds word to turns list
+								advances turn count
+								sets SOLVECOUNT to 4
+								set PREVTURN to 4
+								adds guess to SOLVEGUESS
+								advances SGT
+								end turn
+		4: guesses new word using letters in SOLVED but does not match any words in SOLVEGUESS
+				compares to user word
+					match: print "Good game"
+					non-match: add word to turns list
+						advances turn count
+						set PREVTURN to 4
+						adds guess to SOLVEGUESS
+						advances SGT
+						end turn
+lines 18 through 24 are repeated
+program -> looks at SOLVECOUNT
+	returns number
+		4: guesses new word using letters in SOLVED but does not match any words in SOLVEGUESS
+			compares to user word
+				match: print "Good game"
+					termanates program
+				non-match: add word to turns list
+						advances turn count
+						set PREVTURN to 4
+						adds guess to SOLVEGUESS
+						advances SGT
+						end turn
+		0 - 3: 
+			Checks PENDSOLVE, TRIES, and PREVTURN
+				

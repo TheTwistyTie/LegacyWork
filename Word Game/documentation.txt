@@ -1,0 +1,80 @@
+there are 3120 words in dictionary, all with out repeating letters, arranged alphibetical, on seperate lines
+take dictionary into program and split it into different words.
+
+game picks random word as it's own.
+
+user inputs their own word to prevent cheating
+
+user's first turn:
+
+	user enter's a guess,
+	program determins how many letters match in word and out puts number,
+	if the word is an exact match program tells user they win and ends game
+
+program picks random word and asks user for number of matching letters, 
+user inputs and games checks if number is accurate, 
+calls user out if cheating
+
+depending on user's answer program does the following:
+
+	0: labels those letter as not in word
+
+	1, 2, 3: lables those letters as possible in word
+
+	4: lables those letters as confirmed letters
+	
+	program saves which word was used so it is not used again
+
+users turn:
+
+	same as user's first turn
+
+programs turn:
+
+	program analizes last turn:
+		
+		if last turn was 0 letters it can:
+			
+			guess another random word with none of the same letters,
+				0: labels those letters as not in word
+				1, 2, 3: lable those letters as possible letters
+				4: lable letters as in word
+			guess a word that has some but not all of those letters,
+				pick how many letters to keep the same; lables this choice numberNonPlayable; cannot be 4,
+				pick which letters using ^ that; lables this choice nonPlayableLetters,
+				look for words to match that from dictionary,
+				user returns answer which is double checked by program,
+					0: lables new letters as not in word
+					1: checks numberNonPlayable
+						1, 2: lables all letters not in nonPlayableLetters as possible letters
+						3: lables letter not in nonPlayableLetters as Confirmed letters
+					2: checks numberNonPlayable
+						1: lables all letters not in nonPlayableLetters as possible letters
+						2: lables letter not in nonPlayableLetters as Confirmed letters
+						3, 4: reports error
+					3: checks numberNonPlayable
+						1: lables letter not in nonPlayableLetters as Confirmed letters
+						2, 3, 4: reports error
+
+		if last turn was 1 letter it can:
+			
+			guess a word with none of the same letters
+				0: labels those letters as not in word
+				1, 2, 3: lable those letters as possible letters
+				4: lable letters as in word
+			guess a word with some but not all of those letters,
+				pick how many letters to keep the same; lables this choice as numberSameLetters; cannot be 4,
+				pick which letters to use using ^ that choice; lables this choice as sameLetters; lables leters not used as unusedLetters,
+				chooses word that fits those paramiters,
+				user reports answer that is checked by program,
+					0: lables letters as not in word
+						looks at numberSameLetters
+							1, 2: if any letters are in possible letters it is removed
+							3: looks at unusedLetters; lables that letter as in word
+					1: program looks at letters in 
+
+
+
+
+
+
